@@ -1,0 +1,30 @@
+<html>
+    <body>
+        {% for i in a %}
+        <img src="/media/{{i.image}}" width=100 height=100>
+        {% endfor %}
+
+
+
+        <div id="main"></div>
+
+
+
+
+        <script>
+            window.onload = function()
+            {
+                fetch("/getUsers/").then(function(response) {
+                   let r  = response.text();
+                    alert(r[0]['id'])
+
+
+    });
+
+            };
+        </script>
+    </body>
+
+
+
+</html>
